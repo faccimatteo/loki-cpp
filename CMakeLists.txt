@@ -115,9 +115,9 @@ set_target_properties(loki-cpp PROPERTIES
 
 install(TARGETS loki-cpp
 	LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
-	PUBLIC_HEADER DESTINATION /usr/local/include/loki OPTIONAL
-  PRIVATE_HEADER DESTINATION /usr/local/include/loki/detail)
+	PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_LIBDIR}/include/loki OPTIONAL
+  PRIVATE_HEADER DESTINATION ${CMAKE_INSTALL_LIBDIR}/include/loki/detail)
 
 configure_file(loki-cpp.pc.in loki-cpp.pc @ONLY)
 install(FILES ${CMAKE_BINARY_DIR}/loki-cpp.pc
-	DESTINATION /usr/lib/pkgconfig)
+	DESTINATION ${CMAKE_INSTALL_LIBDIR}/pkgconfig)
